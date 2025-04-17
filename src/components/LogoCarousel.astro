@@ -1,0 +1,98 @@
+---
+// LogoCarousel.astro - Carrusel automático de logos empresariales
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Nuestros Colaboradores</h2>
+    
+    <div class="logo-carousel-container overflow-hidden">
+      <div class="logo-track flex items-center animate-scroll">
+        <!-- Primer conjunto de logos -->
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/Nationwide.svg" alt="Nationwide" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/healthcare-quality.svg" alt="Healthcare Quality" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/assisting-life.svg" alt="Assisting Life" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/data-analytics.svg" alt="Data Analytics" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/fraud-ia.svg" alt="Fraud IA" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/ia-in-law.svg" alt="IA in Law" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/Senior-care-alliance-logo.svg" alt="Senior Care Alliance" class="h-24 object-contain">
+        </div>
+        
+        <!-- Duplicado de logos para el efecto infinito -->
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/Nationwide.svg" alt="Nationwide" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/healthcare-quality.svg" alt="Healthcare Quality" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/assisting-life.svg" alt="Assisting Life" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/data-analytics.svg" alt="Data Analytics" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/fraud-ia.svg" alt="Fraud IA" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/ia-in-law.svg" alt="IA in Law" class="h-24 object-contain">
+        </div>
+        <div class="logo-slide flex-shrink-0 mx-8">
+          <img src="/images/Senior-care-alliance-logo.svg" alt="Senior Care Alliance" class="h-24 object-contain">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .logo-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .logo-track {
+    display: flex;
+    width: fit-content;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 25s linear infinite;
+  }
+  
+  /* Pausa la animación cuando se pasa el mouse */
+  .logo-carousel-container:hover .animate-scroll {
+    animation-play-state: paused;
+  }
+  
+  .logo-slide img {
+    transition: all 0.3s ease;
+  }
+  
+  .logo-slide img:hover {
+    transform: scale(1.05);
+  }
+</style> 
