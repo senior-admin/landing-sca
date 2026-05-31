@@ -149,13 +149,31 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 	color:#ffffff;
 	opacity:.85;
 }
-.sca-founding-banner__note .sca-tech-icon{
-	height:1.2em;
+.sca-founding-banner .sca-tech-icon{
+	height:1.2em;                         /* scales with its line's font-size */
 	width:auto;
 	vertical-align:middle;
 	margin:0 .35em;                       /* small gap each side so it reads inline */
 	position:relative;
 	top:-1px;
+}
+/* "[icon] SCA Technology SAS" on its own line, sized like the banner headline */
+.sca-founding-banner__builder{
+	font-family:"Montserrat", sans-serif;
+	font-weight:700;
+	line-height:1.25;
+	margin:6px auto 4px;
+	color:#ffffff;
+	font-size:clamp(22px, 1.85vw, 26px); /* matches the headline size */
+}
+.sca-founding-banner__builder a{
+	color:#ffffff;
+	font-weight:700;
+	text-decoration:none;
+}
+.sca-founding-banner__builder a:hover{
+	text-decoration:underline;
+	text-underline-offset:3px;
 }
 @media (max-width:600px){
 	.sca-founding-banner{ padding:28px 18px; }
@@ -205,7 +223,9 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 	<p class="sca-founding-banner__headline">Delivered to Our Development Partners &mdash; All Licenses Allocated</p>
 	<div class="sca-founding-banner__inner">
 		<p class="sca-founding-banner__subhead">Thank you to everyone for your interest and feedback in serving the Senior Care Alliance.</p>
-		<p class="sca-founding-banner__note">If you are interested in developing AI applications or workflows, please visit the architect and builder<svg class="sca-tech-icon" role="img" aria-label="SCA Technology" width="254" height="264" viewBox="0 0 254 264" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M118 0H137L149 6L156 13L164 20L198 54L199 56V70L194 78L168 104L174 111L192 129L194 134V141L190 147L182 154H176L148 126L141 118L128 105L124 107L103 128L116 141L124 148L141 164L150 173L152 177V188L147 195L143 197H135L129 193L112 177L102 167L94 160L86 152L78 145L72 138L70 134V122L75 113L99 89L107 82L114 75L121 70L128 69L136 73L145 82L149 80L157 72L164 66L163 62L150 50L138 38L131 34H122L115 38L102 51L94 58L87 65L83 70L75 77L66 87L52 100L51 102H49L47 106L35 118L31 128V136L35 145L62 172L70 179L114 223L122 229L127 231H135L143 227L155 214L181 188L182 186H184L186 182L219 149L222 144L223 140V131L220 123L207 110L206 108V100L215 92L218 91H227L235 95L243 104L251 118L253 125L254 139L252 151L248 160L242 168L209 201L202 209L185 226L178 234L157 255L147 261L139 264H123L113 261L102 252L73 223L65 216L39 190L31 183L10 162L4 152L1 144L0 139V121L4 109L11 98L102 7L110 2L118 0Z" fill="white"/></svg><a href="https://scatechnology.ai" target="_blank" rel="noopener">SCA Technology SAS</a>, or <a id="sca-talk" href="#">start a conversation here</a>.</p>
+		<p class="sca-founding-banner__note">If you are interested in developing AI applications or workflows, please visit the architect and builder:</p>
+		<p class="sca-founding-banner__builder"><svg class="sca-tech-icon" role="img" aria-label="SCA Technology" width="254" height="264" viewBox="0 0 254 264" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M118 0H137L149 6L156 13L164 20L198 54L199 56V70L194 78L168 104L174 111L192 129L194 134V141L190 147L182 154H176L148 126L141 118L128 105L124 107L103 128L116 141L124 148L141 164L150 173L152 177V188L147 195L143 197H135L129 193L112 177L102 167L94 160L86 152L78 145L72 138L70 134V122L75 113L99 89L107 82L114 75L121 70L128 69L136 73L145 82L149 80L157 72L164 66L163 62L150 50L138 38L131 34H122L115 38L102 51L94 58L87 65L83 70L75 77L66 87L52 100L51 102H49L47 106L35 118L31 128V136L35 145L62 172L70 179L114 223L122 229L127 231H135L143 227L155 214L181 188L182 186H184L186 182L219 149L222 144L223 140V131L220 123L207 110L206 108V100L215 92L218 91H227L235 95L243 104L251 118L253 125L254 139L252 151L248 160L242 168L209 201L202 209L185 226L178 234L157 255L147 261L139 264H123L113 261L102 252L73 223L65 216L39 190L31 183L10 162L4 152L1 144L0 139V121L4 109L11 98L102 7L110 2L118 0Z" fill="white"/></svg><a href="https://scatechnology.ai" target="_blank" rel="noopener">SCA Technology SAS</a></p>
+		<p class="sca-founding-banner__note">or <a id="sca-talk" href="#">start a conversation here</a>.</p>
 	</div>
 </div>
 <script>
